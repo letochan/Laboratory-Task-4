@@ -1,6 +1,6 @@
 #pragma once
 #include "SNode.h"
-
+//шаблон списка
 #define TNode SNode
 #define TList Clist
 

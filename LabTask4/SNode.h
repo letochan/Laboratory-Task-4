@@ -1,5 +1,5 @@
 #pragma once
-
+//шаблон узла
 template< class T >
 struct SNode
 {

@@ -1,7 +1,7 @@
 #pragma once
 #include "SNode.h"
 #include "CList.h"
-
+//шаблон очереди
 #define MaxQ 10000
 
 template <class T>
