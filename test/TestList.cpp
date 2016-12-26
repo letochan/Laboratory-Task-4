@@ -91,7 +91,7 @@ TEST(CList, can_use_GetVal)
 	ASSERT_NO_THROW(list.GetVal(0));
 }
 
-TEST(CList, throw_when_use_InsFirst_when_list_is_full)
+TEST(CList, cant_use_InsFirst_when_list_is_full)
 {
 	CList<int> list;
 	for (size_t i = 0; i < MaxL; i++)
@@ -100,7 +100,7 @@ TEST(CList, throw_when_use_InsFirst_when_list_is_full)
 	ASSERT_ANY_THROW(list.InsFirst(5));
 }
 
-TEST(CList, throw_when_use_InsLast_when_list_is_full)
+TEST(CList, cant_use_InsLast_when_list_is_full)
 {
 	CList<int> list;
 	for (size_t i = 0; i < MaxL; i++)
@@ -109,7 +109,7 @@ TEST(CList, throw_when_use_InsLast_when_list_is_full)
 	ASSERT_ANY_THROW(list.InsLast(5));
 }
 
-TEST(CList, throw_when_use_Insert_when_list_is_full)
+TEST(CList, cant_use_Insert_when_list_is_full)
 {
 	CList<int> list;
 	for (size_t i = 0; i < MaxL; i++)
@@ -118,49 +118,49 @@ TEST(CList, throw_when_use_Insert_when_list_is_full)
 	ASSERT_ANY_THROW(list.Insert(5, 5));
 }
 
-TEST(CList, throw_when_use_Insert_when_pos_bigger_count)
+TEST(CList, cant_use_Insert_when_pos_bigger_count)
 {
 	CList<int> list;
 
 	ASSERT_ANY_THROW(list.Insert(0, 5));
 }
 
-TEST(CList, throw_when_use_Delete_when_pos_bigger_count)
+TEST(CList, cant_use_Delete_when_pos_bigger_count)
 {
 	CList<int> list;
 
 	ASSERT_ANY_THROW(list.Delete(5));
 }
 
-TEST(CList, throw_when_use_Delete_when_list_is_empty)
+TEST(CList, cant_use_Delete_when_list_is_empty)
 {
 	CList<int> list;
 
 	ASSERT_ANY_THROW(list.Delete(5));
 }
 
-TEST(CList, throw_when_use_DelFirst_when_list_is_empty)
+TEST(CList, cant_use_DelFirst_when_list_is_empty)
 {
 	CList<int> list;
 
 	ASSERT_ANY_THROW(list.DelFirst());
 }
 
-TEST(CList, throw_when_use_DelLast_when_list_is_empty)
+TEST(CList, cant_use_DelLast_when_list_is_empty)
 {
 	CList<int> list;
 
 	ASSERT_ANY_THROW(list.DelLast());
 }
 
-TEST(CList, throw_when_use_GetVal_when_pos_bigger_count)
+TEST(CList, cant_use_GetVal_when_pos_bigger_count)
 {
 	CList<int> list;
 
 	ASSERT_ANY_THROW(list.GetVal(5));
 }
 
-TEST(CList, throw_when_use_ReVal_when_pos_bigger_count)
+TEST(CList, cant_use_ReVal_when_pos_bigger_count)
 {
 	CList<int> list;
 

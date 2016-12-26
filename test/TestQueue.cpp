@@ -49,13 +49,13 @@ TEST(CQueue, can_use_GetVal)
 	ASSERT_NO_THROW(queue.GetVal());
 }
 
-TEST(CQueue, throw_when_create_Queue_with_incorrect_lengh)
+TEST(CQueue, cant_create_Queue_with_incorrect_lengh)
 {
 	ASSERT_ANY_THROW(CQueue<int> queue(-5));
 	ASSERT_ANY_THROW(CQueue<int> queue(100005));
 }
 
-TEST(CQueue, throw_when_use_Put_when_queue_is_full)
+TEST(CQueue, cant_use_Put_when_queue_is_full)
 {
 	CQueue<int> queue(1);
 	queue.Put(5);
@@ -63,14 +63,14 @@ TEST(CQueue, throw_when_use_Put_when_queue_is_full)
 	ASSERT_ANY_THROW(queue.Put(5));
 }
 
-TEST(CQueue, throw_when_use_Get_when_queue_is_empty)
+TEST(CQueue, cant_use_Get_when_queue_is_empty)
 {
 	CQueue<int> queue(1);
 
 	ASSERT_ANY_THROW(queue.Get());
 }
 
-TEST(CQueue, throw_when_use_GetVal_when_queue_is_empty)
+TEST(CQueue, cant_use_GetVal_when_queue_is_empty)
 {
 	CQueue<int> queue(1);
 
